@@ -9,6 +9,10 @@ import { UserList } from "./user/UserList";
 import { UserCreate } from "./user/UserCreate";
 import { UserEdit } from "./user/UserEdit";
 import { UserShow } from "./user/UserShow";
+import { CarrinhoList } from "./carrinho/CarrinhoList";
+import { CarrinhoCreate } from "./carrinho/CarrinhoCreate";
+import { CarrinhoEdit } from "./carrinho/CarrinhoEdit";
+import { CarrinhoShow } from "./carrinho/CarrinhoShow";
 import { jwtAuthProvider } from "./auth-provider/ra-auth-jwt";
 
 const App = (): React.ReactElement => {
@@ -41,6 +45,13 @@ const App = (): React.ReactElement => {
           edit={UserEdit}
           create={UserCreate}
           show={UserShow}
+        />
+        <Resource
+          name="Carrinho"
+          list={CarrinhoList}
+          edit={CarrinhoEdit}
+          create={CarrinhoCreate}
+          show={CarrinhoShow}
         />
       </Admin>
     </div>

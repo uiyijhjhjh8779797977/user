@@ -17,3 +17,11 @@ model User {
   updatedAt DateTime @updatedAt
   username  String   @unique
 }
+
+model Carrinho {
+  createdAt DateTime @default(now())
+  email     String
+  id        String   @id @default(cuid())
+  imagem    Json
+  updatedAt DateTime @updatedAt
+}
